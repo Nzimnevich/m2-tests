@@ -20,10 +20,10 @@ public class GeneratedTests extends TestBase {
     String lastName = RandomStringUtils.randomAlphabetic(9).toLowerCase();
 
     @Test
-    @DisplayName("Проверка надписи на сайте")
-    @Description("Тест проверяет, что главная страница имеет надпись :\"Отвечаем за каждый квадратный метр\"")
+    @DisplayName("Test ")
+    @Description("Test1")
     void generatedTest() {
-        step("Открыть:\"https://m2.ru/\"", () -> {
+        step("Open:\"https://m2.ru/\"", () -> {
             open("https://m2.ru/");
         });
 
@@ -33,13 +33,14 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Тест на титл сайта")
-    @Description("Сайт имеет титл: \"Метр квадратный - ипотека и рефинансирование, онлайн сделки с недвижимостью - на сайте m2.ru\"")
+    @DisplayName("Test2 ")
+    @Description("Test2")
     void titleTest() {
-        step("Открыть:\"https://m2.ru/\"", () ->
-                open("https://m2.ru/"));
+        step("Open:'https://m2.ru/'", () -> {
+            open("https://m2.ru/");
+        });
 
-        step("Сайт имеет титл: \"Метр квадратный - ипотека и рефинансирование, онлайн сделки с недвижимостью - на сайте m2.ru\"", () -> {
+        step("Site has the title: ", () -> {
             String expectedTitle = "Метр квадратный - ипотека и рефинансирование, онлайн сделки с недвижимостью - на сайте m2.ru";
             String actualTitle = title();
 

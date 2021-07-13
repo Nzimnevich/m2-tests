@@ -1,40 +1,63 @@
 
-# USAGE examples
+# Автотесты на https://m2.ru/
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40" height="40"  alt="Java"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" width="40" height="40"  alt="Seleide"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" width="40" height="40"  alt="Gradle"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" width="40" height="40"  alt="Allure SE"/>
+</a>
 
-### For run remote tests need fill remote.properties or to pass value:
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40" height="40"  alt="Github"/>
+</a>
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
+</a>
 
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
+<a href="https://www.jetbrains.com/idea/">
+    <img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40" height="40"  alt="Telegram"/>
+</a>
 
+IntelliJ IDEA, Java 11, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Github, Jenkins, Telegram (reports), 
 
-Run tests with filled remote.properties:
-```bash
-gradle clean test
+### Команда для запуска из терминала
+Локально должны быть заданы параметры в local.properies, app.properties
 ```
-
-Run tests with not filled remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
+gradle clean
 ```
-
-Serve report:
-```bash
-allure serve build/allure-results
+Для запуска в несколько потоков
 ```
-
-
-For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
+gradle clean -Dthreads=5
 ```
+### Видео о прохождении тестов
+![Selenoid](src/test/resources/files/test.gif)
 
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+### Запуск в Jenkins
+Статистика по запускам
+![Jenkins](src/test/resources/files/Jenkins1.bmp
+)
+Указание параметров для запуска
+![Jenkins](src/test/resources/files/Jenkins2.bmp)
+
+### Отчёт в Allure Report
+![Allure](src/test/resources/files/AllureReport.png)
+
+### Уведомления в Telegram
+![Telegram](src/test/resources/files/Telegram.png)
 
 
