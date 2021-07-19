@@ -54,14 +54,13 @@ public class GeneratedTests extends TestBase {
         step("Открыть:\"https://m2.ru/\"", () ->
                 open("https://m2.ru/"));
 
-        step("Console logs should not contain text 'SEVERE'", () -> {
+        step("Console logs не содержит текст: \"SEVERE\"", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
             String errorText = "SEVERE";
 
             assertThat(consoleLogs).doesNotContain(errorText);
         });
     }
-
 
     @Test
     @DisplayName("Тест на выбор другого региона")
@@ -102,7 +101,7 @@ public class GeneratedTests extends TestBase {
         step("Устанавливаем \"Санкт-Петербург\" в фильтре", () -> {
             $x("//*[contains(@class,'FilterSelectButton__text')][contains(., 'Москва')]").shouldHave(visible);
             $x("//*[contains(@class,'FilterSelectButton__text')][contains(., 'Москва')]/following::i").click();
-            $x("//*[contains(@class,'select-module--option')][contains(., 'Санкт-Петербург')]").click();
+            $x("//*[contains(@class,'RegionSelectCustomMenu__list-item')]//span[text()= 'Санкт-Петербург']").click();
 
         });
 
@@ -117,8 +116,8 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
-    @Description("Тест на поиск через \"Районы\"")
-    @DisplayName("")
+    @DisplayName("Тест на поиск через \"Районы\"")
+    @Description("Выполняем поиск по \"Району\" с двумя фильтрами:\"Донской\",\"Лефортово\" и проверяем наличие хотя бы одного объявления")
     void choiceTwoDistrictsForSearch() {
         step("Открыть:\"https://m2.ru/\"", () ->
                 open("https://m2.ru/"));
@@ -135,7 +134,7 @@ public class GeneratedTests extends TestBase {
             $x("//*[contains(@class,'checkbox-module__checkbox-')][contains(., 'Донской')]").click();
         });
 
-        step("Выбрать \"Донской\"", () -> {
+        step("Выбрать \"Лефортово\"", () -> {
             $x("//*[contains(@class,'checkbox-module__checkbox-')][contains(., 'Лефортово')]").click();
         });
 
@@ -281,7 +280,7 @@ public class GeneratedTests extends TestBase {
 
     @Test
     @DisplayName("Тест на logout")
-    @Description("авторизоваться и выполнить \"logout\"")
+    @Description("Авторизоваться и выполнить \"logout\"")
     void logoutTest() {
         step("Открыть:\"https://m2.ru/\"", () -> {
             open("https://m2.ru/");
