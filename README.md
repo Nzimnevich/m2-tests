@@ -1,5 +1,5 @@
 
-# Автотесты на https://m2.ru/
+# Автотесты для https://m2.ru/
 <a href="https://www.jetbrains.com/idea/">
     <img src="https://starchenkov.pro/qa-guru/img/skills/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/>
 </a>
@@ -55,9 +55,9 @@ gradle clean -Dthreads=5
 ![Jenkins](src/test/resources/files/Jenkins2.bmp)
 
 ### Отчёт в Allure Report
-![Allure](src/test/resources/files/AllureReport.png)
+![Allure](src/test/resources/files/AllureReport.bmp)
 
 ### Уведомления в Telegram
-![Telegram](src/test/resources/files/Telegram.png)
+![Telegram](src/test/resources/files/Telegram.bmp)
 
 
